@@ -1,0 +1,173 @@
+/*
+¦¦¦¦¦¦¦+¦¦¦¦¦¦¦¦+¦¦+   ¦¦+¦¦+     ¦¦¦¦¦¦¦+
+¦¦+----++--¦¦+--++¦¦+ ¦¦++¦¦¦     ¦¦+----+
+¦¦¦¦¦¦¦+   ¦¦¦    +¦¦¦¦++ ¦¦¦     ¦¦¦¦¦+  
++----¦¦¦   ¦¦¦     +¦¦++  ¦¦¦     ¦¦+--+  
+¦¦¦¦¦¦¦¦   ¦¦¦      ¦¦¦   ¦¦¦¦¦¦¦+¦¦¦¦¦¦¦+
++------+   +-+      +-+   +------++------+
+*/
+
+.charsheet 
+{ 
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-size: 15px;
+    width: 800px;
+    background: ;
+    box-sizing: border-box;}
+
+
+
+.charsheet *, .charsheet *:before, .charsheet *:after {
+    box-sizing: inherit;}
+
+/* Redéfinie des trucs à zéro, retirer les puces des listes et la décoraction des liens */
+.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheeth5, 
+.charsheet h6, .charsheet a, .charsheet p, .charsheet span, .charsheet div,
+.charsheet figure, .charsheet img, .charsheet ul, .charsheet li,
+.charsheet body, .charsheet fieldset, .charsheet input, .charsheet label, .charsheet textarea, .charsheet select 
+{
+	margin: 0; padding: 0; border: 0; background: transparent;
+	list-style: none;
+    box-shadow: 0 0 0 #000000; border-radius: 0;}
+
+/* LOGO */
+.sheet-logo{ 
+    width: 400px;}
+
+.sheet-caracteristique, .sheet-information, .sheet-liens, .sheet-histoire{ 
+    width: 700px;
+    padding: 10px;
+    border: 1px solid #000000;
+    box-shadow: 4px 4px 1px #000000;}
+
+
+.sheet-caracteristique *, .sheet-information *, .sheet-liens *, .sheet-histoire *{ display: inline-block;}
+
+.sheet-caracteristique p, .sheet-information p, .sheet-liens p, .sheet-histoire p{ font-weight: bold;}
+
+.sheet-information p, .sheet-liens p{ width: 150px;}
+
+.sheet-histoire p{ padding-right: 10px;}
+
+.sheet-caracteristique .sheet-nombre{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 1px #000000;}
+
+.sheet-caracteristique .sheet-italic{
+    font-weight: normal;
+    font-style: italic;}
+
+.sheet-information input, .sheet-liens input, .sheet-histoire input{
+    width: 340px;
+    font-style: italic;}
+
+.sheet-information input[type="checkbox"]{ width: 20px;}
+
+.sheet-caracteristique textarea, .sheet-histoire textarea, .sheet-information textarea{
+    height: 60px;
+    font-style: italic;}
+
+.sheet-caracteristique textarea{
+    height: 120px;
+    font-style: italic;}
+    
+.sheet-titre{
+    width: 600px !important;
+    font-size: 20px;
+    font-weight: bold;}
+
+.sheet-attribut .sheet-titre, .sheet-blessureExp .sheet-titre{
+    width: 300px !important;}
+    
+.sheet-puce{ width: 15px !important;}
+
+.sheet-input1{
+    width: 650px !important;}
+    
+.sheet-attribut, .sheet-blessureExp{
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;}
+    
+.sheet-blessureExp input{
+    margin-right: 0;} 
+
+.sheet-caracteristique select{
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 1px #000000;}
+    
+    
+    
+    
+    
+    
+.sheet-d6{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-bottom: 10px !important;
+    margin-right: -25px !important;
+    width: 25px;
+    height: 25px;
+    opacity: 0;}
+
+.sheet-d6 + span{
+    display: inline-block;
+    vertical-align: middle;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Demigods-PBTA/master/d6n.png');
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;}
+
+
+
+
+
+input[name="attr_harm"]{
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    height: 30px;
+    width: 30px;
+    margin-right: -30px;}
+
+input[name="attr_harm"] + span{
+    opacity: 1;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Demigods-PBTA/master/blessuren.png') no-repeat;
+    background-size: 30px 30px;
+    transition: 0.3s all ease-in;}
+
+input[name="attr_harm"]:hover + span{
+    opacity: 0.8;}
+    
+input[name="attr_harm"]:nth-of-type(1n+5) + span{
+    background: url('https://raw.githubusercontent.com/MiniSteff/Demigods-PBTA/master/blessurer.png') no-repeat;
+    background-size: 30px 30px;}
+    
+input[name="attr_harm"]:checked ~ span{ opacity: 0.5;}
+input[name="attr_harm"]:checked + span{ opacity: 1;}
+
+input[name="attr_harm"]:nth-of-type(1){ 
+    margin-left: -30px;}
+    
+input[name="attr_harm"]:nth-of-type(1) + span{
+    background: url('https://raw.githubusercontent.com/MiniSteff/Demigods-PBTA/master/croix.png') center center no-repeat;
+    background-size: 20px 20px;
+    opacity: 0.1;
+    transition: 0.3s all ease-in;}
+    
+input[name="attr_harm"]:nth-of-type(1):hover + span{
+    opacity: 1;}
+   
+
+
