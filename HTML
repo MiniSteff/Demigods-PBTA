@@ -1,0 +1,119 @@
+<img src="https://raw.githubusercontent.com/MiniSteff/Demigods-PBTA/master/logoPerso.png" class="sheet-logo" />
+
+<br><br>
+
+<div class="sheet-caracteristique">
+    <div class="sheet-attribut">
+        <p class="sheet-titre">- ATTRIBUTS</p><br><br>
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{prowess}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <input type="text" class="sheet-nombre" name="attr_prowess" value="0"><p>Prouesse <span class="italic">(frapper tes ennemis)</span></p><br>
+        
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{mettle}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <input type="text" class="sheet-nombre" name="attr_mettle" value="0"><p>Courage <span class="italic">(agir sous pression)</span></p><br>
+        
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{awe}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <input type="text" class="sheet-nombre" name="attr_awe" value="0"><p>Impression <span class="italic">(influencer quelqu'un)</span></p><br>
+        
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{judgement}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <input type="text" class="sheet-nombre" name="attr_judgement" value="0"><p>Jugement <span class="italic">(voir le tissage)</span></p><br>
+        
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{wyrd}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <input type="text" class="sheet-nombre" name="attr_wyrd" value="0"><p>Wyrd <span class="italic">(plier le destin)</span></p><br>
+    </div>
+    
+    <div class="sheet-blessureExp">
+        <p class="sheet-titre">- BLESSURES</p><br>
+        <p class="italic">-1 au jet à partir de 4 blessures</p><br>
+        <input type="radio" name="attr_harm" value="[[0]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[1-1]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[2-2]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[3-3]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[-1]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[-2+1]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[-3+2]]"><span></span>
+        <input type="radio" name="attr_harm" value="[[-4+3]]" checked><span></span>
+
+        <br><br>
+    
+        <p class="sheet-titre">- FILS</p><br>
+        <p class="italic">Dépenser 1 pour au choix :  <br>○ Une faveur du destin <br>○ Altérer une scène <br>○ Soigner 2 blessures</p><br>
+        <input type="checkbox" name="attr_threads1" value="0">
+        <input type="checkbox" name="attr_threads2" value="1">
+        <input type="checkbox" name="attr_threads3" value="2">
+        <input type="checkbox" name="attr_threads4" value="3">
+        <input type="checkbox" name="attr_threads5" value="4">
+    </div>
+    
+    <br><br>
+    
+    <p class="sheet-titre">- MOUVEMENTS</p><br><br>
+    <fieldset class="repeating_liens">
+        <p class="puce">○ </p><input class="sheet-input1" type="text" name="attr_nomMouvement" placeholder="................................................................................................"><br>
+        <button class="sheet-d6" type="roll" value="/r 2d6+[[@{caracMouvement}+@{harm}+?{Bonus ? | 0}]]"></button><span></span>
+        <select name="attr_caracMouvement">
+            <option value="0">Aucun</option>
+            <option value="@{prowess}">Prouesse</option>
+            <option value="@{mettle}">Courage</option>
+            <option value="@{awe}">Impression</option>
+            <option value="@{judgement}">Jugement</option>
+            <option value="@{wyrd}">Wyrd</option>
+        </select><br>
+        <textarea name="attr_descriptionMouvement" placeholder="Description de votre mouvement"></textarea>
+    </fieldset><br><br>
+</div>
+
+<br>
+
+<div class="sheet-information">
+    <p class="sheet-titre">- INFORMATIONS</p><br><br>
+    
+    <p>○ Nom</p><input type="text" name="attr_character_name" placeholder="................................................"><br>
+    <p>○ Parent divin</p><input type="text" name="attr_parentDivin" placeholder="................................................"><br>
+    <p>○ Panthéon</p><input type="text" name="attr_pantheon" placeholder="................................................"><br>
+    <p>○ Rôle</p><input type="text" name="attr_cliche" placeholder="................................................"><br><br>
+    
+    <p class="sheet-titre">- DONS</p><br><br>
+    <fieldset class="repeating_cadeaux">            
+        <p class="sheet-puce">○ </p><input type="text" class="sheet-input1" name="attr_cadeau" placeholder="................................................"><br>
+    </fieldset><br><br>
+    
+    <p class="sheet-titre">- ASCENDANCE</p><br>
+    <input type="checkbox" name="attr_ascendance1"><input type="checkbox" name="attr_ascendance2"><input type="checkbox" name="attr_ascendance3"><br><br>
+    <textarea name="attr_ascendance" placeholder="Le moment de vérité de votre personnage"></textarea>
+    <br><br>
+    
+    <p class="sheet-titre">- APOTHEOSE</p><br><br>
+    <textarea name="attr_deathMove" placeholder="La dernière action de ton personnage au moment de sa mort"></textarea>
+    <br><br>
+</div>
+
+<br>
+
+<div class="sheet-liens">
+    <p class="sheet-titre">- NOEUDS</p><br><br>
+    <fieldset class="repeating_liens">            
+        <p class="sheet-puce">○ </p><input type="text" class="sheet-input1" name="attr_liens" placeholder="................................................"><br>
+    </fieldset><br><br>
+    
+    <p class="sheet-titre">- BROCHES</p><br><br>
+        <p>○ Nom</p><input type="text" name="attr_spindleNom" placeholder="................................................"><br>
+        <p>○ Relation</p><br>
+        <textarea name="attr_broches" placeholder="................................................................................................"></textarea>
+
+</div>
+
+<br>
+
+<div class="sheet-histoire">
+    <p class="sheet-titre">- HISTOIRE</p><br><br>
+        
+    <p>○ Qui es ton parent divin ? </p><input type="text" name="attr_parentDivin" placeholder="................................................"><br>
+    <p>○ A quel âge tu as su qu tu étais différent ? </p><input type="text" name="attr_histoire1"  placeholder="................................................"><br>
+    <p>○ Qui te l'as dit, un messager ou ton parent divin ? </p><input type="text" name="attr_histoire2" placeholder="................................................"><br>
+    <p>○ Tu ressembles à quoi ? </p><br>
+    <textarea type="text" name="attr_histoire3" placeholder="................................................................................................"></textarea>
+    <p>○ Comment tu te sens par rapport à ton panthéon ? </p><br>
+    <textarea type="text" name="attr_histoire4" placeholder="................................................................................................"></textarea>
+    <p>○ A quoi ressemble tes parents mortels ? </p><br>
+    <textarea type="text" name="attr_histoire5" placeholder="................................................................................................"></textarea>
+</div>
